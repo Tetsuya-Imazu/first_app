@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 end
 
 Rails.application.routes.draw do
- get 'posts', to: 'posts#index'
- get 'posts/new', to: 'posts#new'
+ root to: 'posts#index'
  post 'posts', to: 'posts#create'
+ get 'posts/:id', to: 'posts#checked'
 end
 # "posts"というパスに、"GET"メソッドでリクエストが送られてきたとき、"posts"コントローラーの"index"アクションを呼び出す設定
